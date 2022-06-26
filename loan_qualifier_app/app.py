@@ -9,6 +9,7 @@ Example:
 import sys
 import fire
 import questionary
+import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -107,9 +108,31 @@ def save_qualifying_loans(qualifying_loans):
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
+
+    Logic tree:    
+    If there are no qualifying loans exit program and let the user know.
+    If there are 1 or more qualifying loans ask user if they want to save the loans to csv file
+    If they want to save the qualifying loans to a csv file then have them input a file path to 
+    qualifying_loans
+    Once they input a file path: open and write to the stated csv file
+    Then exit program and tell user it has been saved to csv file   
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    if len(qualifying_loans) == 0:
+        sys.exit("There are no qualifying loans. Thank you, goodbye.")
+    elif len(qualifying_loans) >=1:
+        prompt_save_response = questionary.select("Do you want to save qualifiying loans to CSV?",
+        choices=["Yes","No"]).ask()
+        if prompt_save_response == "Yes":
+            
+            csvpath = questionary.text("Enter a file path to a qualifying_loans (.csv):").ask()
+            csvpath = Path(csvpath)
+            with open(csvpath, 'w', newline='') as f:
+                csvwriter =csv.writer(f)
+                for row in qualifying_loans:
+                    csvwriter.writerow(row)
+            sys.exit(".....and file has been saved. Goodbye")        
+        else:
+            sys.exit("Ok then, goodbye.") 
 
 
 def run():
