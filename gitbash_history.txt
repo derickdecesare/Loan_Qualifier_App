@@ -1,0 +1,50 @@
+  456  git add README.md
+  457  git status
+  458  touch mynewfile.py
+  459  touch newnewfile.csv
+  460  ls
+  461  git status
+  462  git add newnewfile.csv
+  463  git status
+  464  rm mynewfile.py
+  465  ls
+  466  git status
+  467  git commit -m"Edited README and added new text file"
+  468  git push
+  469  git config --list
+  470  git clone globad
+  471  git clone https://github.com/derickdecesare/Loan_Qualifier_App.git
+  472  git status
+  473  ls
+  474  cd Loan_Qualifier_App
+  475  git status
+  476  conda activate dev
+  477  ls
+  478  cd loan_qualifier_app
+  479  ls
+  480  wintpy python app.py
+  481  winpty python app.py
+  482  conda deactivate
+  483  cd ..
+  484  git status
+  485  git add loan_qualifier_app/app.py
+  486  git add loan_qualifier_app/Images/
+  487  git add loan_qualifier_app/data/qualifying_loans.csv
+  488  git add loan_qualifier_app/qualifier/filters/__pycache__/
+  489  git add loan_qualifier_app/qualifier/utils/__pycache__/
+  490  git status
+  491  git commit -m "Added save_qualifying_loans function to app.py, added Images folder, added Prompts png, added Example_Run png"
+  492  git status
+  493  git push
+  494  cd ..
+  495  ls
+  496  cd Loan_Qualifier_App
+  497  touch README.md
+  498  git status
+  499  git add README.md
+  500  git status
+  501  git commit -m "Updated README"
+  502  git status
+  503  git push
+  504  git status
+  505  history 50 > gitbash_history.txt
