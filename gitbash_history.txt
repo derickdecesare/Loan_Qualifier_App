@@ -1,31 +1,3 @@
-  481  winpty python app.py
-  482  conda deactivate
-  483  cd ..
-  484  git status
-  485  git add loan_qualifier_app/app.py
-  486  git add loan_qualifier_app/Images/
-  487  git add loan_qualifier_app/data/qualifying_loans.csv
-  488  git add loan_qualifier_app/qualifier/filters/__pycache__/
-  489  git add loan_qualifier_app/qualifier/utils/__pycache__/
-  490  git status
-  491  git commit -m "Added save_qualifying_loans function to app.py, added Images folder, added Prompts png, added Example_Run png"
-  492  git status
-  493  git push
-  494  cd ..
-  495  ls
-  496  cd Loan_Qualifier_App
-  497  touch README.md
-  498  git status
-  499  git add README.md
-  500  git status
-  501  git commit -m "Updated README"
-  502  git status
-  503  git push
-  504  git status
-  505  history 50 > gitbash_history.txt
-  506  ls
-  507  git status
-  508  git add gitbash_history.txt
   509  git status
   510  git commit -m "Added gitbash_history.txt"
   511  git status
@@ -48,3 +20,31 @@
   528  git add loan_qualifier_app/app.py
   529  git status
   530  history 50 > gitbash_history.txt
+  531  git status
+  532  git add gitbash_history.txt
+  533  git status
+  534  git commit -m "Updated app.py, added updated gitbash_history.txt"
+  535  git status
+  536  git push
+  537  conda activate dev
+  538  ls
+  539  cd loan_qualifier_app
+  540  ls
+  541  winpty python app.py
+  542  winpty python app.py
+  543  conda deactivate
+  544  cd ..
+  545  ls
+  546  git add Python.gitignore
+  547  touch Python.gitignore
+  548  ls
+  549  git status
+  550  git add Python.gitignore
+  551  git status
+  552  history 50 > terminal_history.txt
+  553  git status
+  554  rm termial_history.txt
+  555  ls
+  556  rm terminal_history.txt
+  557  ls
+  558  history 50 > gitbash_history.txt
