@@ -126,11 +126,14 @@ def save_qualifying_loans(qualifying_loans):
             
             csvpath = questionary.text("Enter a file path to a qualifying_loans (.csv):").ask()
             csvpath = Path(csvpath)
-            with open(csvpath, 'w', newline='') as f:
-                csvwriter =csv.writer(f)
-                for row in qualifying_loans:
-                    csvwriter.writerow(row)
-            sys.exit(".....and file has been saved. Goodbye")        
+            if not csvpath.exists():
+                sys.exit(f"Oops! Can't find this path: {csvpath}")
+            else:
+                with open(csvpath, 'w', newline='') as f:
+                    csvwriter =csv.writer(f)
+                    for row in qualifying_loans:
+                        csvwriter.writerow(row)
+                sys.exit(".....and file has been saved. Goodbye")        
         else:
             sys.exit("Ok then, goodbye.") 
 
